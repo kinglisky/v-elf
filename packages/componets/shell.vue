@@ -12,13 +12,13 @@ const THEME = {
   light: {
     backgroundColor: '#fff',
     borderColor: '#d9d9d9',
-    color: '#333',
+    color: '#333'
   },
 
   dark: {
     backgroundColor: '#1f2d3d',
     borderColor: '#1f2d3d',
-    color: '#fff',
+    color: '#fff'
   }
 }
 
@@ -28,7 +28,7 @@ export default {
   props: {
     placement: {
       type: String,
-      default: 'top',
+      default: 'top'
     },
 
     arrowSize: {
@@ -44,7 +44,7 @@ export default {
     themeConf: {
       type: Object,
       default: () => ({})
-    },
+    }
   },
 
   computed: {
@@ -53,7 +53,7 @@ export default {
       const options = THEME[theme] || THEME.light
       return Object.assign({}, options, themeConf)
     },
-   
+
     arrowWrapStyle () {
       return {
         borderWidth: `${this.arrowSize}px`
